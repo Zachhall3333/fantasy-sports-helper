@@ -7,10 +7,26 @@
     <link rel="stylesheet" href="contact-style.css" />
   </head>
   <body>
+    <header class="fantasy-header">
+      <div class="fantasy-logo-container">
+        <img
+          class="fantasy-logo"
+          src="assets/img/small.png"
+          alt="Fantasy Helper Logo"
+        />
+        <h2 id="nav-header">Fantasy Sports Helper</h2>
+      </div>
+      <nav class="fantasy-nav">
+        <a href="#">Football</a>
+        <a href="#">Basketball</a>
+        <a href="#">Baseball</a>
+        <button type="submit" class="nav-button">Contact Me</button>
+      </nav>
+    </header>
     <div class="contact-container">
       <form action="" class="contact-left">
         <div class="contact-left-title">
-          <h2>Get in Touch</h2>
+          <h2 id="form">Get in Touch</h2>
           <hr />
         </div>
         <input
@@ -32,9 +48,17 @@
           placeholder="Your Message"
           class="contact-inputs"
         ></textarea>
-        <button type="submit"></button>
+        <button type="submit">Submit</button>
       </form>
-      <div class="contact-right"></div>
+      <div class="contact-right">
+        <h2 id="right-text-header">
+          Are you tired of losing? Let me help you build a winning team.
+        </h2>
+        <p id="right-text-body">
+          Contact me today for expert draft advice, waiver wire pickups, and
+          lineup optimization throughout the season.
+        </p>
+      </div>
     </div>
   </body>
 </html>
