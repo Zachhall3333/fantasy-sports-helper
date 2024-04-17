@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
     <link rel="stylesheet" href="contact-style.css" />
+    <script defer src="app.js"></script>
   </head>
   <body>
     <header class="fantasy-header">
+      <div class="hamburger-menu">
+        <img src="" alt="Hamburger Menu Icon" />
+      </div>
       <div class="fantasy-logo-container">
         <img
           class="fantasy-logo"
@@ -27,7 +31,7 @@
     </header>
 
     <div class="contact-container">
-      <form action="" class="contact-left">
+      <form action="" class="contact-left" autocomplete="off">
         <div class="contact-left-title">
           <h2 id="form">Get in Touch</h2>
           <hr />
@@ -37,21 +41,25 @@
           name="name"
           placeholder="Your Name"
           class="contact-inputs"
-          required
+          id="name"
         />
+        <div class="error-text">Your Input is Invalid</div>
         <input
           type="text"
           name="email"
           placeholder="Your Email"
           class="contact-inputs"
-          required
+          id="email"
         />
+        <div class="error-text">Your Input is Invalid</div>
         <textarea
           name="message"
           placeholder="Your Message"
           class="contact-inputs"
+          id="message"
         ></textarea>
-        <button type="submit">Submit</button>
+        <div class="error-text">Your Input is Invalid</div>
+        <button type="submit" class="submit-form">Submit</button>
       </form>
       <div class="contact-right">
         <h2 id="right-text-header">

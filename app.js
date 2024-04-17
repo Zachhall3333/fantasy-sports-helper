@@ -1,10 +1,22 @@
-const navButton = document.querySelector('.nav-button');
-const navLinks = document.querySelectorAll('a');
+const nameInput = document.querySelector('input[name="name"]');
 
-navButton.addEventListener('click', () => {
-  navLinks.forEach(link => link.classList.toggle('show'));
+const form = document.querySelector('.contact-left');
+
+let isFormValid = false;
+
+const validateInputs = () => {
+  // nameInput.nextElementSibling.classList.add('error-text');
+
+  if (nameInput.value === '') {
+    nameInput.nextElementSibling.classList.toggle('visible');
+  }
+};
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  validateInputs();
 });
 
-.show {
-  display: block;
-}
+nameInput.addEventListener('input', () => {
+  validateInputs();
+});

@@ -50,6 +50,41 @@
   display: flex;
 }
 
+.hamburger-menu {
+  display: none; /* Hide initially for larger screens */
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu::before {
+  top: -5px;
+}
+
+.hamburger-menu::after {
+  bottom: -5px;
+}
+
+.hamburger-menu.active::before {
+  transform: translateY(10px) rotate(-45deg);
+}
+
+.hamburger-menu.active::after {
+  transform: translateY(-10px) rotate(45deg);
+}
+
 .home-main-photo {
   align-items: center;
   background-image: url('assets/img/sports.png');
@@ -220,6 +255,10 @@ h2 {
   .hamburger-menu {
     display: block;
     cursor: pointer;
+  }
+
+  .fantasy-nav {
+    display: none; 
   }
 
 
